@@ -5,8 +5,13 @@
     (selectedFilterRadioButtonChanged)="onFilterChanged($event)" >
 </app-filter>
 <div class="estore-products-container">
-    <div *ngFor="let product of products" (click)="selectedProduct = product">
+    <!-- Using ng-container here to reduce adding more div -->
+    <ng-container *ngFor="let product of products">
         <!-- *ngIf="selectedFilterRadioButton === 'all' || product.is_in_inventory.toString() === selectedFilterRadioButton" -->
-        <app-product [product]="product" *ngIf="searchText === '' || product.name.toLowerCase().includes(searchText)"></app-product>
-    </div>
+        <app-product 
+            [product]="product"
+            *ngIf="searchText === '' || product.name.toLowerCase().includes(searchText)"
+            (click)="selectedProduct = product">
+        </app-product>
+    </ng-container>
 </div>

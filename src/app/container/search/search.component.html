@@ -1,0 +1,9 @@
+<div class="estore-search-product">
+    <input type="text" class="estore-search-product-input" [(ngModel)]="searchText" (input)="onSearchTextChanged()">
+    <button [ngClass]="{'btn': true, 'btn-search': searchText, 'btn-search-disabled': !searchText}" [disabled]="!searchText">Search</button>
+</div>
+<div class="estore-search-result">
+    <p *ngIf="searchText != ''">
+        <strong>Search result for: </strong> {{ searchText }}
+    </p>
+</div>

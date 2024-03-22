@@ -1,0 +1,17 @@
+<div class="estore-product-container">
+    <!-- <img [src] = "product.pImage">
+    <p>Name: {{ product.name }}</p>
+    <p>Price: {{ '$' + product.price }}</p>
+    <p>Color: {{ product.color }}</p>
+    <p>Discounted Price: {{ getDiscountedPrice().toFixed(2) }}</p>
+    <p>{{ product.inStock > 0 ? 'Only remain '  + product.inStock + ' in stock' : 'Not available'}}</p>
+    <button (click)="decrementCartValue()">-</button>
+    <span>{{ addToCartNumber }}</span>
+    <button (click)="incrementCartValue()">+</button>
+    <br>
+    <button [disabled]="!(product.inStock > 0)" >Buy now</button> -->
+    <app-search (searchTextChanged)="setSearchText($event)"></app-search>
+    <app-product-list [searchText]="searchText"></app-product-list>
+</div>
+
+

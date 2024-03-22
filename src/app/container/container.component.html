@@ -12,7 +12,7 @@
     <button [disabled]="!(product.inStock > 0)" >Buy now</button> -->
     <app-search (searchTextChanged)="setSearchText($event)"></app-search>
     <app-product-list [searchText]="searchText" #productListComponent></app-product-list>
-    <app-product-detail *ngIf="productListComponent.selectedProduct"></app-product-detail>
+    <app-product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></app-product-detail>
 </div>
 
 

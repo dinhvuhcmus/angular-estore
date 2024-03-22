@@ -68,10 +68,10 @@ span{
     border-radius: 5px;
 }
 .estore-product-detail-available-size{
-    margin: 0px 0px;
+    margin: 0px 5px;
     background-color: #28282B; 
     color:white;
-    border-radius: 0px;
+    border-radius: 5px;
     padding: 10px 15px;
     font-size: 16px;
 }
@@ -88,6 +88,7 @@ span{
 }
 .btn-add-to-cart{
     border: none;
+    border-radius: 5px;
     background-color: #28282B;
     padding: 10px 30px;
     font-size: 20px;

@@ -38,7 +38,7 @@
                 <diV style="margin-top: 20px;">
                     <span class="estore-product-detail-available-color"
                     *ngFor="let color of product.color"
-                    [style.background-color]="color.toLocaleLowerCase()">{{ color }}</span>
+                    [style.background-color]="color.toLocaleLowerCase()"></span>
                 </diV>                
             </div>
 
@@ -52,7 +52,10 @@
             </div>
         </div>
         <div class="estore-product-detail-addtoCart">
-            <button class="btn-add-to-cart">ADD TO CART</button>
+            <button class="btn-add-to-cart" *ngIf="product.is_in_inventory; else notifyMe">ADD TO CART</button>
+            <ng-template #notifyMe>
+                <button class="btn-add-to-cart">Notify Me</button>
+            </ng-template>
         </div>
     </div>
     <div class="overlay"></div>

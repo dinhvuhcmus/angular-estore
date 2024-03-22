@@ -1,6 +1,6 @@
 <div class="estore-search-product">
-    <input type="text" class="estore-search-product-input" [(ngModel)]="searchText" (input)="onSearchTextChanged()">
-    <button [ngClass]="{'btn': true, 'btn-search': searchText, 'btn-search-disabled': !searchText}" [disabled]="!searchText">Search</button>
+    <input type="text" class="estore-search-product-input" #searchInput>
+    <button class="btn btn-search" (click)="onSearchText(searchInput)">Search</button>
 </div>
 <div class="estore-search-result">
     <p *ngIf="searchText != ''">

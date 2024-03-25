@@ -13,6 +13,24 @@
     <app-search (searchTextChanged)="setSearchText($event)"></app-search>
     <app-product-list [searchText]="searchText" #productListComponent></app-product-list>
     <app-product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></app-product-detail>
+    <div class="estore-featured-products">
+        <div class="estore-featured-product-heading">
+            <h1>Latest arrivals in popular brands</h1>
+        </div>
+        <app-featured-brands>
+            <h3 class="title">New arrivals in Nike</h3>
+            <button class="call-to-action">Show more arrivals from Nike</button>
+        </app-featured-brands>
+        <app-featured-brands>
+            <h3 class="title">New arrivals in Adidas</h3>
+            <button class="call-to-action">Show more arrivals from Adidas</button>
+        </app-featured-brands>
+        <app-featured-brands>
+            <h3 class="title">New arrivals in Reebok</h3>
+            <button class="call-to-action">Show more arrivals from Reebok</button>
+        </app-featured-brands>
+    </div>
+
 </div>
 
 

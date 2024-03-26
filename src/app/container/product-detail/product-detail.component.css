@@ -86,14 +86,14 @@ span{
 .estore-product-detail-addtoCart{
     margin: 20px 0px;
 }
-.btn-add-to-cart{
+/* .btn-add-to-cart{
     border: none;
     border-radius: 5px;
     background-color: #28282B;
     padding: 10px 30px;
     font-size: 20px;
     color: #fff;
-}
+} */
 
 .scroll {
     overflow-y: scroll;
